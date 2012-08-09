@@ -38,19 +38,19 @@ int main(string[] args)
 
     // convert 'args' to an argv array to pass to window.show(argc, char** argv)
     char*[] argv;
-    foreach (arg; args) {
+    foreach (arg; args)
         argv ~=  toUTFz!(char*)(arg);
-    }
 
     mainWindow.show(argv.length, argv.ptr);
 
     fl_run();
 
+    // call C++ method that returns the text from dragndrop
     const char* ptext = mainWindow.getDroppedText();
     writeln("getDroppedText() : ", to!string(ptext));
 
+    // will delete mainWindow in C++
     freeMainWindow(mainWindow);
-
 
 	return 0;
 }
