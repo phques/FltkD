@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<CodeBlocks_workspace_file>
+	<Workspace title="testFltkD">
+		<Project filename="testFltkD-mingw64.cbp">
+			<Depends filename="fltkLib/fltkTestDLib-mingw64.cbp" />
+		</Project>
+		<Project filename="fltkLib/fltkTestDLib-mingw64.cbp" />
+	</Workspace>
+</CodeBlocks_workspace_file>

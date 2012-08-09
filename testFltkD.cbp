@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6" />
+	<Project>
+		<Option title="testFltkD" />
+		<Option pch_mode="2" />
+		<Option compiler="gdc" />
+		<Option show_notes="0">
+			<notes>
+				<![CDATA[seems that if the reference to our D lib (libfltkTestD) is placed manually in 'other linker options' CodeBlocks does not see the deopendency (ie if lib changes, it wont link the app !)
+
+but when we add our lib as a standard lib, it doesnt link, order of libs on the cmdline causes probs.
+so I also put the fltk lib myself as a norma lib in the libs list... ouff]]>
+			</notes>
+		</Option>
+		<Build>
+			<Target title="Debug">
+				<Option output="bin/Debug/testFltkD" prefix_auto="1" extension_auto="1" />
+				<Option object_output="obj/Debug/" />
+				<Option type="1" />
+				<Option compiler="gdc" />
+				<Option parameters="-scheme gtk+" />
+				<Compiler>
+					<Add option="-g" />
+				</Compiler>
+				<Linker>
+					<Add directory="fltkLib/bin/Debug" />
+				</Linker>
+			</Target>
+			<Target title="Release">
+				<Option output="bin/Release/testFltkD" prefix_auto="1" extension_auto="1" />
+				<Option object_output="obj/Release/" />
+				<Option type="1" />
+				<Option compiler="gdc" />
+				<Compiler>
+					<Add option="-O2" />
+				</Compiler>
+				<Linker>
+					<Add option="-s" />
+					<Add directory="fltkLib/bin/Release" />
+				</Linker>
+			</Target>
+		</Build>
+		<Compiler>
+			<Add option="-Wall" />
+		</Compiler>
+		<Linker>
+			<Add option="`fltk-config --ldflags`" />
+			<Add library="fltkTestD" />
+			<Add library="fltk" />
+		</Linker>
+		<Unit filename="fltkLib/interfaces/cppInterface.di">
+			<Option compile="1" />
+			<Option link="1" />
+		</Unit>
+		<Unit filename="main.d" />
+		<Extensions>
+			<code_completion />
+			<debugger />
+			<envvars />
+		</Extensions>
+	</Project>
+</CodeBlocks_project_file>
