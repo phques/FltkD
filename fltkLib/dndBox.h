@@ -4,7 +4,7 @@
 #include <FL/Fl_Box.H>
 #include <string>
 #include "interfaces/imainWndFl.h"
-#include "interfaces/itextProcess.h"
+#include "interfaces/itextProcessD.h"
 
 class DndBox : public Fl_Box
 {

@@ -6,7 +6,7 @@
 #include "../dndBox.h"
 #include "../interfaces/imainWndD.h"
 #include "../interfaces/imainWndFl.h"
-#include "../interfaces/itextProcess.h"
+#include "../interfaces/itextProcessD.h"
 #include <FL/Fl_Double_Window.H>
 #include <FL/Fl_Return_Button.H>
 

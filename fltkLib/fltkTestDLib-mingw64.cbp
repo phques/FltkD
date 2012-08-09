@@ -46,7 +46,7 @@
 		<Unit filename="fluid/mainWndFl.h" />
 		<Unit filename="interfaces/imainWndD.h" />
 		<Unit filename="interfaces/imainWndFl.h" />
-		<Unit filename="interfaces/itextProcess.h" />
+		<Unit filename="interfaces/itextProcessD.h" />
 		<Unit filename="main.cpp" />
 		<Unit filename="mainWndFlImpl.cpp" />
 		<Extensions>

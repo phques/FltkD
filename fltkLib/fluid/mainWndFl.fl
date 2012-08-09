@@ -1,18 +1,18 @@
 # data file for the Fltk User Interface Designer (fluid)
-version 1.0300
-header_name {.h}
+version 1.0300 
+header_name {.h} 
 code_name {.cxx}
 decl {\#include "../dndBox.h"} {public global
-}
+} 
 
 decl {\#include "../interfaces/imainWndD.h"} {public global
-}
+} 
 
 decl {\#include "../interfaces/imainWndFl.h"} {public global
-}
+} 
 
-decl {\#include "../interfaces/itextProcess.h"} {public global
-}
+decl {\#include "../interfaces/itextProcessD.h"} {selected public global
+} 
 
 class MainWindowFl {open : {public IMainWindowD, IMainWindowFl}
 } {
@@ -24,7 +24,7 @@ class MainWindowFl {open : {public IMainWindowD, IMainWindowFl}
     } {
       Fl_Box dndBox {
         label {Drop stuff here}
-        user_data {(IMainWindowFl*)this} selected
+        user_data {(IMainWindowFl*)this}
         protected xywh {10 13 300 90} box UP_BOX labeltype SHADOW_LABEL labelfont 3 labelsize 30
         class DndBox
       }
@@ -58,4 +58,4 @@ window = 0;} {}
   } {}
   decl {ITextProcessor* textProcessor;} {private local
   }
-}
+} 
