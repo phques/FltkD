@@ -12,7 +12,7 @@ const char* MainWindowFl::getDroppedText()
     return dndBox->droppedText.c_str();
 }
 
-ITextProcessor* MainWindowFl::getTextProcessor()
+ITextProcessorD* MainWindowFl::getTextProcessor()
 {
     return textProcessor;
 }

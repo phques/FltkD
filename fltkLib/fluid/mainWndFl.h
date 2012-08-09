@@ -12,7 +12,7 @@
 
 class MainWindowFl : public IMainWindowD, IMainWindowFl {
 public:
-  MainWindowFl(ITextProcessor* textProcessor);
+  MainWindowFl(ITextProcessorD* textProcessor);
 protected:
   Fl_Double_Window *window;
   DndBox *dndBox;
@@ -25,8 +25,8 @@ public:
   virtual void hide();
   virtual void toto(const char* p1, const char* p2, const char* p3);
   virtual const char* getDroppedText();
-  virtual ITextProcessor* getTextProcessor();
+  virtual ITextProcessorD* getTextProcessor();
 private:
-  ITextProcessor* textProcessor; 
+  ITextProcessorD* textProcessor; 
 };
 #endif

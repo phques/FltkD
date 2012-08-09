@@ -10,7 +10,7 @@ import fltkLib.interfaces.cppInterface;
 
 
 // code that will be called from c++/fltk gui
-class TextProcessor : ITextProcessor  {
+class TextProcessor : ITextProcessorD  {
     string text;
 
     extern (C++) void setText(const char* ptext){

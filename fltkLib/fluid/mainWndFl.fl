@@ -11,12 +11,12 @@ decl {\#include "../interfaces/imainWndD.h"} {public global
 decl {\#include "../interfaces/imainWndFl.h"} {public global
 } 
 
-decl {\#include "../interfaces/itextProcessD.h"} {selected public global
+decl {\#include "../interfaces/itextProcessD.h"} {public global
 } 
 
 class MainWindowFl {open : {public IMainWindowD, IMainWindowFl}
 } {
-  Function {MainWindowFl(ITextProcessor* textProcessor)} {open
+  Function {MainWindowFl(ITextProcessorD* textProcessor)} {open selected
   } {
     code {this->textProcessor = textProcessor;} {}
     Fl_Window window {open
@@ -54,8 +54,8 @@ window = 0;} {}
   } {}
   Function {getDroppedText()} {return_type {virtual const char*}
   } {}
-  Function {getTextProcessor()} {return_type {virtual ITextProcessor*}
+  Function {getTextProcessor()} {return_type {virtual ITextProcessorD*}
   } {}
-  decl {ITextProcessor* textProcessor;} {private local
+  decl {ITextProcessorD* textProcessor;} {private local
   }
 } 

@@ -32,11 +32,11 @@ public:
             fprintf(stderr, "FL_PASTE '%s'\n", Fl::event_text());
 
             // get ptr to top window
-            // & ask it for the ITextProcessor
+            // & ask it for the ITextProcessorD
             IMainWindowFl* imainWnd = static_cast<IMainWindowFl*>(user_data());
-            ITextProcessor* textProcessor = imainWnd->getTextProcessor();
+            ITextProcessorD* textProcessor = imainWnd->getTextProcessor();
 
-            // call ITextProcessor
+            // call ITextProcessorD
             textProcessor->setText(droppedText.c_str());
             textProcessor->process();
 

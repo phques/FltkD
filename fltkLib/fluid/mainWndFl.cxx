@@ -9,7 +9,7 @@ void MainWindowFl::cb_Close(Fl_Return_Button* o, void* v) {
   ((MainWindowFl*)(o->parent()->user_data()))->cb_Close_i(o,v);
 }
 
-MainWindowFl::MainWindowFl(ITextProcessor* textProcessor) {
+MainWindowFl::MainWindowFl(ITextProcessorD* textProcessor) {
   this->textProcessor = textProcessor;
   { window = new Fl_Double_Window(320, 155);
     window->user_data((void*)(this));

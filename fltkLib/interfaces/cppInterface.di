@@ -13,7 +13,7 @@ extern (C++) {
         const char* getDroppedText();
     }
 
-    IMainWindowD createMainWindow(ITextProcessor);
+    IMainWindowD createMainWindow(ITextProcessorD);
     void freeMainWindow(IMainWindowD w);
     void fl_run();
 }
@@ -21,7 +21,7 @@ extern (C++) {
 
 // D interface called by c++ code
 extern (C++) {
-    interface ITextProcessor {
+    interface ITextProcessorD {
         void setText(const char*);
         void process();
     }

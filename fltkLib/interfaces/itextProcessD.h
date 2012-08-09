@@ -1,7 +1,7 @@
 #ifndef  _ITextProcessor
 #define _ITextProcessor
 
-class ITextProcessor {
+class ITextProcessorD {
 public:
     virtual void setText(const char*);
     virtual void process();

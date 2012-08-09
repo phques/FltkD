@@ -11,7 +11,7 @@ int main (int argc, char ** argv)
 }
 */
 
-IMainWindowD* createMainWindow(ITextProcessor* processor)
+IMainWindowD* createMainWindow(ITextProcessorD* processor)
 {
     return new MainWindowFl(processor);
 }
