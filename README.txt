@@ -4,3 +4,4 @@ fltkLib is the C++ GUI using FLTK (fluid)
 test git remote win <-> linux
 test git2
 changed on wincopy
+changed again on linux, will test pull from windows
