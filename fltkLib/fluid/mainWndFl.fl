@@ -16,11 +16,11 @@ decl {\#include "../interfaces/itextProcessD.h"} {public global
 
 class MainWindowFl {open : {public IMainWindowD, IMainWindowFl}
 } {
-  Function {MainWindowFl(ITextProcessorD* textProcessor)} {open selected
+  Function {MainWindowFl(ITextProcessorD* textProcessor)} {open
   } {
     code {this->textProcessor = textProcessor;} {}
     Fl_Window window {open
-      protected xywh {123 468 320 155} type Double hide resizable
+      protected xywh {3 492 420 325} type Double align 80 visible
     } {
       Fl_Box dndBox {
         label {Drop stuff here}
@@ -31,7 +31,18 @@ class MainWindowFl {open : {public IMainWindowD, IMainWindowFl}
       Fl_Return_Button {} {
         label Close
         callback {hide();}
-        protected xywh {195 115 110 30}
+        protected xywh {285 255 110 30}
+      }
+      Fl_Text_Editor editor {
+        xywh {15 125 340 60}
+        code0 {editor->buffer(textBuffer);}
+      }
+      Fl_Button {} {
+        label file
+        callback {Fl_File_Chooser* chooser = new Fl_File_Chooser(
+".", "*", 0, "file chooser");
+chooser->show();} selected
+        xywh {45 225 70 20}
       }
     }
   }
@@ -46,7 +57,7 @@ window = 0;} {}
   } {
     code {window->show(argc, argv);} {}
   }
-  Function {hide()} {open return_type virtual
+  Function {hide()} {return_type virtual
   } {
     code {window->hide();} {}
   }
@@ -57,5 +68,7 @@ window = 0;} {}
   Function {getTextProcessor()} {return_type {virtual ITextProcessorD*}
   } {}
   decl {ITextProcessorD* textProcessor;} {private local
+  }
+  decl {Fl_Text_Buffer textBuffer} {private local
   }
 } 

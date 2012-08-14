@@ -9,6 +9,8 @@
 #include "../interfaces/itextProcessD.h"
 #include <FL/Fl_Double_Window.H>
 #include <FL/Fl_Return_Button.H>
+#include <FL/Fl_Text_Editor.H>
+#include <FL/Fl_Button.H>
 
 class MainWindowFl : public IMainWindowD, IMainWindowFl {
 public:
@@ -20,6 +22,11 @@ private:
   void cb_Close_i(Fl_Return_Button*, void*);
   static void cb_Close(Fl_Return_Button*, void*);
 public:
+  Fl_Text_Editor *editor;
+private:
+  void cb_file_i(Fl_Button*, void*);
+  static void cb_file(Fl_Button*, void*);
+public:
   virtual ~MainWindowFl();
   virtual void show(int argc, char ** argv);
   virtual void hide();
@@ -28,5 +35,6 @@ public:
   virtual ITextProcessorD* getTextProcessor();
 private:
   ITextProcessorD* textProcessor; 
+  Fl_Text_Buffer textBuffer; 
 };
 #endif
