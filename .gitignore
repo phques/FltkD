@@ -1,0 +1,5 @@
+*.[oa]
+*.layout
+*.depend
+bin/
+obj/
