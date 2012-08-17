@@ -1,0 +1,29 @@
+Using IUP GUI toolkit with D the language
+
+IUP is licensed under MIT license ,  see COPYRIGHT-IUP
+IUP-D is Licensed under the Academic Free License version 3.0
+see License.txt or License.html 
+-------
+
+Direct use of the IUP libraries C functions in the D code.
+
+Includes a small simple IupWidget class to wrap a IUP control/widget/dialog etc,
+uses opDisptach() to forward calls to the real IupXxx functions,
+also overrides index operators to read/set attributes (IupStoreAttribute)
+eg: 
+
+    auto z(string s) { return s.toStringz; }
+    ...
+
+    IupSetFunction("button1_cb", &button1_callback);
+
+    // button2 is a IupWidget
+    IupSetCallback(button2.ihandle, "ACTION", &button2_cb);
+    IupSetCallback(*button2, "ACTION", &button2_cb);
+    button2.SetCallback("ACTION".z, &button2_cb);
+
+    // button3 is a IupWidget
+    button3["ACTIVE"] = "No";
+
+    // dlg is a IupWidget
+    dlg.Show();

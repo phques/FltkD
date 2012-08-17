@@ -1,3 +1,9 @@
+// dndBox.h, drag and drop Fl_Box example
+
+// Copyright 2012 Philippe Quesnel
+// Licensed under the Academic Free License version 3.0
+
+
 #ifndef DNDBOX_H_INCLUDED
 #define DNDBOX_H_INCLUDED
 

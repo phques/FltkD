@@ -1,3 +1,9 @@
+// imaindFl.h
+// interface for c++ code outside of the window (eg: DnDBox class)
+
+// Copyright 2012 Philippe Quesnel
+// Licensed under the Academic Free License version 3.0
+
 
 #ifndef _imainwndfl_h
 #define _imainwndfl_h

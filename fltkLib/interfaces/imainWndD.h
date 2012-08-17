@@ -1,6 +1,8 @@
-
 // this is the Interface we want to see in D for our window
 // cf cppInterface.di
+
+// Copyright 2012 Philippe Quesnel
+// Licensed under the Academic Free License version 3.0
 
 // by using a specific 'interface' like this,
 // we don't have to guess the layout of the vtable, so the D interface is just as this one

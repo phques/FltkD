@@ -1,3 +1,8 @@
+// mainWndFlImpl.cpp
+// implements virtual methods of MainWindowFl declared in th Fluid file
+
+// Copyright 2012 Philippe Quesnel
+// Licensed under the Academic Free License version 3.0
 
 #include "fluid/mainWndFl.h"
 

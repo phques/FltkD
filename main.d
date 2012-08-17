@@ -1,3 +1,8 @@
+// main.d, example of using fltk in D
+
+// Copyright 2012 Philippe Quesnel
+// Licensed under the Academic Free License version 3.0
+
 module main;
 
 import std.stdio;

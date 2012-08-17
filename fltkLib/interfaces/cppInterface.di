@@ -1,5 +1,8 @@
 // the C++ interfaces to our fltk window
 
+// Copyright 2012 Philippe Quesnel
+// Licensed under the Academic Free License version 3.0
+
 module cppInterface;
 
 // D interface to call c++ code

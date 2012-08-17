@@ -1,3 +1,9 @@
+// main.cpp,
+// implements some C++ functions accessed by D
+
+// Copyright 2012 Philippe Quesnel
+// Licensed under the Academic Free License version 3.0
+
 #include <FL/Fl.H>
 #include <FL/Fl_Window.H>
 #include <FL/Fl_Box.H>

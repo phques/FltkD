@@ -2,6 +2,14 @@
 version 1.0300 
 header_name {.h} 
 code_name {.cxx}
+comment {// Copyright 2012 Philippe Quesnel
+// Licensed under the Academic Free License version 3.0
+} {in_source in_header
+} 
+
+decl {\#include <Fl/Fl_File_Chooser.H>} {selected private global
+} 
+
 decl {\#include "../dndBox.h"} {public global
 } 
 
@@ -41,7 +49,7 @@ class MainWindowFl {open : {public IMainWindowD, IMainWindowFl}
         label file
         callback {Fl_File_Chooser* chooser = new Fl_File_Chooser(
 ".", "*", 0, "file chooser");
-chooser->show();} selected
+chooser->show();}
         xywh {45 225 70 20}
       }
     }
