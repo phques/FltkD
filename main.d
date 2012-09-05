@@ -46,7 +46,7 @@ int main(string[] args)
     foreach (arg; args)
         argv ~=  toUTFz!(char*)(arg);
 
-    mainWindow.show(argv.length, argv.ptr);
+    mainWindow.show(cast(int)argv.length, argv.ptr);
 
     fl_run();
 

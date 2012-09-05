@@ -4,7 +4,7 @@
 	<Project>
 		<Option title="testFltkD" />
 		<Option pch_mode="2" />
-		<Option compiler="gdc_d_compiler_tdm_mingw64" />
+		<Option compiler="gnu_gdc_d_compiler_tdm_mingw64" />
 		<Option show_notes="0">
 			<notes>
 				<![CDATA[seems that if the reference to our D lib (libfltkTestD) is placed manually in 'other linker options' CodeBlocks does not see the deopendency (ie if lib changes, it wont link the app !)
@@ -15,25 +15,25 @@ so I also put the fltk lib myself as a norma lib in the libs list... ouff]]>
 		</Option>
 		<Build>
 			<Target title="Debug">
-				<Option output="bin/Debug/testFltkD" prefix_auto="1" extension_auto="1" />
-				<Option object_output="obj/Debug/" />
+				<Option output="bin\Debug\testFltkD" prefix_auto="1" extension_auto="1" />
+				<Option object_output="obj\Debug\" />
 				<Option type="1" />
-				<Option compiler="gdc_d_compiler_tdm_mingw64" />
+				<Option compiler="gnu_gdc_d_compiler_tdm_mingw64" />
 				<Option parameters="-scheme gtk+" />
 				<Compiler>
 					<Add option="-g" />
-					<Add directory="fltkLib/fluid" />
-					<Add directory="fltkLib/interface" />
+					<Add directory="fltkLib\fluid" />
+					<Add directory="fltkLib\interface" />
 				</Compiler>
 				<Linker>
-					<Add directory="fltkLib/bin/Debug" />
+					<Add directory="fltkLib\bin\Debug" />
 				</Linker>
 			</Target>
 			<Target title="Release">
-				<Option output="bin/Release/testFltkD" prefix_auto="1" extension_auto="1" />
-				<Option object_output="obj/Release/" />
+				<Option output="bin\Release\testFltkD" prefix_auto="1" extension_auto="1" />
+				<Option object_output="obj\Release\" />
 				<Option type="1" />
-				<Option compiler="gdc_d_compiler_tdm_mingw64" />
+				<Option compiler="gnu_gdc_d_compiler_tdm_mingw64" />
 				<Compiler>
 					<Add option="-O2" />
 				</Compiler>
@@ -44,8 +44,10 @@ so I also put the fltk lib myself as a norma lib in the libs list... ouff]]>
 		</Build>
 		<Compiler>
 			<Add option="-Wall" />
+			<Add option="-m32" />
 		</Compiler>
 		<Linker>
+			<Add option="-m32" />
 			<Add library="fltkTestD" />
 			<Add library="fltk" />
 			<Add library="ole32" />
@@ -56,7 +58,7 @@ so I also put the fltk lib myself as a norma lib in the libs list... ouff]]>
 			<Add library="comdlg32" />
 			<Add directory="$(#fl.lib)" />
 		</Linker>
-		<Unit filename="fltkLib/interfaces/cppInterface.di">
+		<Unit filename="fltkLib\interfaces\cppInterface.di">
 			<Option compile="1" />
 			<Option link="1" />
 		</Unit>
